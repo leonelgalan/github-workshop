@@ -1,12 +1,12 @@
 ---
 layout: image
-image: ./pages/filename.jpg
+image: filename.jpg
 backgroundSize: contain
 ---
 
 ---
 layout: image
-image: ./pages/final.gif
+image: final.gif
 backgroundSize: contain
 ---
 
@@ -28,7 +28,7 @@ https://phdcomics.com/comics/archive.php?comicid=1531
 
 # Without Git vs With Git
 
-❌ Without Git  
+❌ Without Git
 
 ```txt
 analysis_march15.R
