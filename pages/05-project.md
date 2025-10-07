@@ -1,3 +1,26 @@
+# Before We Start
+
+Ensure you have:
+
+- ✅ GitHub account created
+- ✅ Git installed locally
+- ✅ VS Code installed
+- ✅ Basic terminal/command line familiarity
+
+**Quick check:**
+
+```bash
+git --version
+code --version
+```
+
+<!-- notes:
+Do a quick show of hands to catch anyone missing prerequisites.
+Have backup plans for common issues.
+-->
+
+---
+
 # Form Teams
 
 **Groups of 4**, each implementing **one function** from `scripts/01_clean_data.py`
@@ -50,8 +73,14 @@ Team Colors: https://matplotlib.org/stable/gallery/color/named_colors.html#css-c
 
 ```bash
 git clone https://github.com/YOUR-USERNAME/movie-analysis.git
-code movie-analysis .
+code movie-analysis
 ```
+
+## Why fork?
+
+- You get your own copy to experiment safely
+- Submit changes back via Pull Requests
+- Practice open-source contribution workflow
 
 <!-- notes:
 Each group forks the repo to their own account.
@@ -99,39 +128,72 @@ Ensure everyone submits a PR before leaving.
 
 ---
 
+# Testing Your Function
+
+Before committing, verify your function works:
+
+```bash
+uv run python scripts/01_clean_data.py
+uv run pytest -k your_function_name
+```
+
+Look for:
+
+- ✅ No error messages
+- ✅ Script completes successfully
+- ✅ Output file `results/movies_clean.csv` created
+
+<!-- notes:
+Emphasize testing BEFORE pushing.
+Show how to read error messages if something fails.
+-->
+
+---
+
 # Between Sessions
 
-1. **Pull the latest changes** from the main repo after all PRs are merged.
-2. **Complete your assigned script** (`02`, `03`, or `04`) — see
-   `docs/PROJECT_SPEC.md` for details.
-3. **Commit early and often** as you make progress.
-4. **Push your work** before Day 2.
+1. Sync with upstream (all 16 functions now available!)
 
-**Bonus challenge:**
-Try bringing work from another team’s repository — just like in open source.
-To do this, you’ll need to experiment with adding a new Git remote and merging
-(or cherry-picking) their changes into your project. If you do, make sure
-everything runs cleanly end-to-end afterward.
+   ```bash
+   git remote add upstream https://github.com/leonelgalan/movie-analysis.git
+   git pull upstream main
+   ```
+
+2. **Collaborate to complete all analysis scripts** (`02`, `03`, `04`)
+   - Work together or divide the scripts among team members
+   - OR pull completed scripts from other teams' repos (like open source!)
+3. Create feature branches and commit frequently
+4. **Open PRs within your fork** (not to upstream) for team review
+
+**Learning opportunity:**
+
+Practice adding remotes and merging/cherry-picking work from other teams.
+This mirrors real open-source collaboration!
 
 <!-- notes:
 By the end of today, all 16 functions will be merged into main.
 Between sessions, students work independently on their assigned analysis scripts.
 Encourage curiosity: exploring remotes and merging others' work is optional, but
 gives a taste of real-world open-source collaboration. Next session: we'll focus
-on integrating everyone’s analysis and resolving merge conflicts.
+on integrating everyone's analysis and resolving merge conflicts.
 -->
 
 ---
 
-# Day 2: Merge & Report
+# Day 2: Integration & Conflict Resolution
 
-- Merge everyone's analysis work
-- Resolve merge conflicts together
-- Prepare a final report
-- Celebrate completed collaboration!
+1. Sync with upstream changes
+2. **Merge any remaining PRs within your fork**
+3. **Practice conflict resolution:**
+   - Two team members edit same section of `REPORT.md` on different branches
+   - Create competing PRs within fork
+   - Resolve merge conflict in VS Code together
+4. Run complete pipeline end-to-end
+5. Review results and celebrate!
 
 <!-- notes:
-Day 2 is about integration and conflict resolution.
+Day 2 is about integration and conflict resolution WITHIN each team's fork.
 Work through merge conflicts as teaching moments.
+Emphasize that all PRs for scripts 02-04 are fork-internal, not to upstream.
 End with a summary report showing combined results.
 -->
